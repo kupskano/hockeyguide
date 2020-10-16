@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
+  {
+    path: 'guide-details',
+    loadChildren: () => import('./guide-details/guide-details.module').then( m => m.GuideDetailsPageModule)
+  },
+  {
+    path: 'typehere-details',
+    loadChildren: () => import('./typehere-details/typehere-details.module').then( m => m.TypehereDetailsPageModule)
+  },
 ];
 
 @NgModule({

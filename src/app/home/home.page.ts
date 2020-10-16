@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private loadingCtroller: LoadingController,
+    private router: Router
+  ) {}
+
+  redirectWelcome() {
+    this.loadingCtroller.create({
+      duration:2000,
+      message: 'Redirecting please wait...',
+      cssClass: 'my-custom-class'
+      // backdropDismiss: true to dismiss loading
+    }).then((load) => {
+      load.present();
+      load.onDidDismiss().then(() => {
+        this.router.navigate(['/welcome']);
+      });
+    })
+  }
 
 }

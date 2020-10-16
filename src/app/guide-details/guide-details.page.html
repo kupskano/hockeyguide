@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back" defaultHref="/welcome"></ion-back-button>
+      <div class="ion-text-center">
+        <ion-title>{{title}}</ion-title>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+  
+ 
+</ion-header>
+
+<ion-content>
+  <ion-card>
+   <ion-card-header>
+     <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <img src="{{ImageUrl}}" alt="" height="400px;">
+        </ion-col>
+        <ion-col size="6">
+         <b>(1).</b> {{rule1}}
+          <br>
+          <br>
+          <b>(2).</b> {{rule2}}
+          <br>
+          <br>
+          <b>(3).</b> {{rule3}}
+          <br>
+          <br>
+          <b>(4).</b> {{rule4}}
+        </ion-col>
+      </ion-row>
+     </ion-grid>
+   </ion-card-header>
+    <ion-card-content>
+     
+    </ion-card-content>
+  </ion-card>
+</ion-content>

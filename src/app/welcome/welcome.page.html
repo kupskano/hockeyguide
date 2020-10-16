@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="main-toolbar">
+    <ion-title>HOCKEY CAGE GUIDE</ion-title>
+    <ion-buttons slot="start">
+      <ion-button *ngFor="let hockeyrule of hockeyrules" (click)="guide_details_rules(hockeyrule)" slot="end">
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+  </div>
+
+</ion-header>
+
+  <ion-toolbar>
+    <ion-searchbar class="ion-no-padding ion-padding-top" placeholder="Search." (ionInput)="filterProductData($event)"></ion-searchbar>
+  </ion-toolbar>
+  <br>
+  <br>
+  <br>
+<ion-content>
+
+  
+ 
+  <ion-card  *ngFor="let typehere of typeheres" (click)="typeheredetails(typehere)">
+    <ion-card-content>
+      <div class="ion-text-center">
+        {{typehere.title}}
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-img class="image-background" src="assets/icon/hockey_edit.gif" ></ion-img> -->
+
+  
+
+  
+</ion-content>
+
+
+<ion-footer slot="fixed"  class="ion-no-border">
+  <ion-header>
+    <ion-toolbar class="footer-toolbar">
+    </ion-toolbar>
+  </ion-header>
+</ion-footer>
+
+
+
